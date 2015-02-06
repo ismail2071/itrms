@@ -1,0 +1,22 @@
+li a.active {
+    color: #2980B9;
+    background-color: #BDC3C7;
+}
+
+li a.active {
+    color: #2980B9;
+    background-color: #BDC3C7;
+}
+
+
+#loginbox {
+
+	text-align: center;
+}
+
+input[value]{
+
+	display: inline-block;
+margin-bottom: 5px;
+font-weight: bold;
+}

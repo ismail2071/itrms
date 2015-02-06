@@ -1,0 +1,239 @@
+
+.wrapper {
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.logo {
+    line-height: 48px;
+    -webkit-flex: logo;
+            flex: logo;
+    width: 40%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+
+
+.hostname {
+    line-height: 48px;
+    
+    -webkit-flex: hostname;
+            flex: hostname;
+    width: 30%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+
+}
+
+
+.header {
+    width: 100%;
+    height: 48px;
+    background-color: #CBCCCE;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    vertical-align: top;
+}
+
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 36px;
+    background-color: #CBCCCE;
+}
+
+.footer span {
+    color: #000000;
+    display: block;
+    text-align: center;
+    line-height: 36px;
+
+}
+
+
+.bell {
+
+    -webkit-flex: bell;
+            flex: bell;
+    text-align: right;
+    background-color: #CBCCCE;
+
+    padding: 1px;
+
+}
+
+.search-box {
+    /* line-height: 48px; */
+
+    -webkit-flex: search-box;
+            flex: search-box;
+    width: 20%;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.body {
+
+  display: -webkit-flex;
+  display: flex;
+
+
+    margin: auto;
+    padding: 5px;
+    background-color: #FFFFFF
+}
+
+
+.main-box {
+
+      -webkit-flex: main-box;
+            flex: main-box;
+
+    width: 90%;
+    margin: 80px auto;
+    padding: 10px;
+    background-color: #FFFFFF
+}
+
+.left-box{
+
+      -webkit-flex: left-box;
+            flex: left-box;
+
+    width: 10%;
+    margin: 80px auto;
+    padding: 10px;
+    background-color: #FFFFFF
+
+}
+
+
+
+.input-box {
+    width: 100%;
+    height:34px;
+    margin-bottom: 10px;
+}
+
+.input-box .search-input {
+    width: 82%;
+    height: 100%;
+}
+
+.save-button {
+    width: 16%;
+    height: 100%;
+}
+
+.todo-list {
+    border: 1px solid gray;
+    height: 200px;
+    overflow: scroll;
+}
+
+.list-item {
+    padding: 0px 14px;
+    line-height: 40px;
+    height: 40px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-top: -1px;
+}
+
+
+
+.list-item span {
+    line-height: 36px;
+    outline: 0;
+}
+
+.selected {
+    background-color: #C2DAC2;
+}
+
+.boxo {
+    border: 1px dashed red;
+}
+.hide {
+    display: none;
+}
+
+.right {
+    float: right;
+}
+
+/*  
+    Tablet
+    480-720px 
+*/
+@media (max-width: 480px) {
+    
+    .main-box {
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        bottom: 36px;    
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        background-color: #F0E68C
+    }
+
+    .todo-list {
+        border: 2px solid gray;
+        height: auto;
+        overflow: scroll;
+        position: absolute;
+        top: 55px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+}
+
+/* 
+    Desktop
+    一般應該是 1024+ 才進入此段
+    但為了示範方便，先寫 720px
+*/
+@media (min-width: 720px) {
+    
+    .todo-list {
+        border: 2px solid gray;
+        width: 120px;
+        height: 200px;
+        overflow: scroll;
+        display: inline-block;
+    }
+
+    .item-detail {
+        float: right;
+        width: calc(100% - 140px);
+        height: 200px;
+        display: inline-block;
+    }
+
+    .item-detail button {
+        margin-top: -45px;
+        float: right;
+    }
+
+}
