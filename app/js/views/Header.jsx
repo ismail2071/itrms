@@ -19,7 +19,7 @@ var Header = React.createClass({
       <header className="header">
         
         <p className="hostname"><label>主機名稱：<u>my-computer</u></label></p>
-        <p className="logo"><label>查核監控管理系統3</label></p>
+        <p className="logo"><label>查核監控管理系統4</label></p>
         <button className="btn btn-default bell">
                 <span className="glyphicon glyphicon-flag" aria-hidden="true" ><span className="badge">9</span></span>
 
