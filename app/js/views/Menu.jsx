@@ -2,14 +2,21 @@
  *
  */
 var actions = require('../actions/AppActionCreator');
-var ListItem = React.createFactory(require('./ListItem.jsx'));
 
 /**
  * 
  */
 var comp = React.createClass({
 
+  handleShow: function(){
 
+          var menu = {};
+          menu.type = 'hostStatus';
+          actions.showHostStatus( menu );
+
+
+
+  },
 
   /**
    * 
@@ -23,13 +30,15 @@ var comp = React.createClass({
 
     return (
       
+       <menu className="menu">
       <div className="menu">
          <ul className="nav nav-pills nav-stacked">
-          <li className="active"><a href="#">主機狀態</a></li>
+          <li className="active"  ><a href="#" onClick={this.handleShow} >主機狀態</a></li>
           <li ><a href="#">監控設定</a></li>
           <li ><a href="#">註冊碼</a></li>
          </ul>
       </div>
+      </menu>
     );
   
   },

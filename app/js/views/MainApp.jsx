@@ -15,8 +15,10 @@ var InputBox = React.createFactory( require('./InputBox.jsx') );
 var List = React.createFactory( require('./List.jsx') );
 var Detail = React.createFactory( require('./Detail.jsx') );
 var Menu = React.createFactory( require('./Menu.jsx') );
+var HostStatus = React.createFactory (require('./HostStatus.jsx') );
 var TodoStore = require('../stores/TodoStore');
 var AppConstants = require('../constants/AppConstants');
+
 
 var idResize;
 
@@ -34,7 +36,7 @@ var MainApp = React.createClass({
      */
     getInitialState: function() {
         var o = this.getTruth(); 
-        o.screenSize = 'tablet'
+        o.screenSize = 'wrapper';
         return o;
     },
 
@@ -176,6 +178,7 @@ var MainApp = React.createClass({
                     <div className="main-box">
                         <InputBox truth={this.state} />
                         <List truth={this.state} />
+                        <HostStatus truth={this.state} />
                     </div>
                 </div>
                     <Footer />
@@ -191,16 +194,26 @@ var MainApp = React.createClass({
                     
                     <Header truth={this.state} />
 
-                <div className="body">                    
-                    <div className="left-box">
-                        <Menu />
-                    </div>
+                
+                    <div className="row">          
+                        
+                        <div className="col-md-3">
+                            <div className="left-box">
+                                <Menu />
+                            </div>
+                        </div>
+                        
+                        <div className="col-md-9">
+                            <div className="main-box">
+                                <InputBox truth={this.state} />
+                                <List truth={this.state} />
+                                <HostStatus truth={this.state} />
+                            </div>
+                        </div>
 
-                    <div className="main-box">
-                        <InputBox truth={this.state} />
-                        <List truth={this.state} />
+
                     </div>
-                </div>
+                
                     <Footer />
                 </div>    
             )

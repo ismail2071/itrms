@@ -35,6 +35,8 @@ module.exports = keyMirror({
     
     TODO_FILTER: null,
 
+    SHOW_HOST_STATUS: null,
+
   	noop: null
 });
 

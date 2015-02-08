@@ -83,6 +83,60 @@ var AppActionCreators = {
 
     },
 
+
+    showHostStatus: function( menu ) {
+
+        //if (menu.type == 'hostStatus')
+        //var hostStatus = this.socketConnect();
+        //console.log(hostStatus);
+        var hostStatus = "test";
+
+        AppDispatcher.handleViewAction({
+            actionType: AppConstants.SHOW_HOST_STATUS,
+            hostStatus: hostStatus
+        });
+
+    },
+
+
+    socketConnect : function(){
+      
+      var socketResult='';
+
+      var that=this;  
+      /*save this class as that,because 'this' frequently changes when we change the scope by calling a new function (e.g client.on() ) , we can't access the original  
+      value, alias to 'that' allows u can access the original value of object 'this' 
+
+      var host='127.0.0.1';
+      var port='8080';
+
+      var client=new net.Socket();
+      client.connect(port,host,function(){
+        console.log('connected to:'+host+':'+port);     
+        client.write("C");
+      });
+
+      client.on('data',function(data){
+        console.log('DATA:'+data);
+        console.dir(data);
+        socketResult=data.toString();
+        console.log(socketResult);
+
+        
+      });
+
+      client.on('close',function(){
+        console.log("close");
+      });
+    */
+
+        socketResult="abc";
+      return socketResult;
+
+    },
+
+
+
     // dummy
     noop: function(){}
 };

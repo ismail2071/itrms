@@ -41,7 +41,7 @@ if( db.hasOwnProperty('mydb') == false ){
 var o = JSON.parse(db.getItem('mydb'));
 arrTodos = o.todos ? o.todos : [] ;
 selectedItem = o.selectedItem;
-
+hostStatus = o.hostStatus;
 //========================================================================
 //
 // Public API
@@ -59,7 +59,8 @@ $.extend( Store, {
         return {
             arrTodos: arrTodos,
             selectedItem: selectedItem,
-            filter: searchFilter
+            filter: searchFilter,
+            hostStatus: hostStatus
         }
     },
 
@@ -168,7 +169,14 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
                 
             break;
 
-        
+        case AppConstants.SHOW_HOST_STATUS:
+
+            
+            hostStatus = action.hostStatus;
+
+            persist();
+
+            break;
 
         default:
             //
@@ -184,7 +192,7 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
  * 將資料保存入 localStorage，下次開啟時取回
  */
 function persist(){
-    db.setItem('mydb', JSON.stringify({todos: arrTodos, selectedItem: selectedItem}) );
+    db.setItem('mydb', JSON.stringify({todos: arrTodos, selectedItem: selectedItem, hostStatus:hostStatus}) );
 }
 
 //
